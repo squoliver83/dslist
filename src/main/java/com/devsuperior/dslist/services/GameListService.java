@@ -27,7 +27,7 @@ public class GameListService {
                 .toList();
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public void move(Long listId, int sourceIndex, int targetIndex) {
         List<GameMinProjection> list = gameRepository.searchByList(listId);
 
